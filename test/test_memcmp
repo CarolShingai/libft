@@ -1,0 +1,9 @@
+
+ int	main(void)
+ {
+	char t[10] = "bom di";
+	char p[10] = "bom dia";
+
+	printf("%d\n", ft_memcmp(t, p, sizeof(t)));
+	printf("%d", (int) memcmp(t, p, sizeof(t)));
+ }

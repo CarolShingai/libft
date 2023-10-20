@@ -1,0 +1,7 @@
+int	main(void)
+{
+	char x[20] = "hello world";
+	char d[100] = "hello jadhgv";
+	//printf("%s", memmove(d, x, sizeof(x)));
+	printf("%s", ft_memmove(d+5, x, sizeof(x)));
+}

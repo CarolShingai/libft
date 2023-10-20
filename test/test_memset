@@ -1,0 +1,6 @@
+int	main(void)
+{
+	char str[20];
+	printf("%s\n", ft_memset(str, 'a', sizeof(char) * 2));
+	printf("%s\n", memset(str, 'b', sizeof(char) * 2));
+}

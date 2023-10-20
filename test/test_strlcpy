@@ -1,0 +1,7 @@
+int	main(void)
+{
+	char c[10] = "Bom dia";
+	char d[10];
+	printf("%d\n", (int) ft_strlcpy( d, c, sizeof(c)));
+	printf("%s", d);
+}
