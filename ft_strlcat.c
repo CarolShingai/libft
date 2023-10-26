@@ -6,13 +6,11 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:32:38 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/20 14:07:38 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:35:42 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(char *c);
 
 size_t	ft_strlcat(char *dest, char *src, size_t n)
 {
@@ -34,9 +32,15 @@ size_t	ft_strlcat(char *dest, char *src, size_t n)
 		dest[i_dest + i_src] = src[i_src];
 		i_src++;
 	}
-	if (i_dest < n)
+	if (i_dest + i_src < n)
 	{
 		dest[i_dest + i_src] = '\0';
 	}
 	return (size_dest + size_src);
 }
+// int	main(void)
+// {
+// 	char t[12] = "Boa noite, ";
+// 	char s[] = "tchau.";
+// 	printf("%zu %s\n", ft_strlcat(t, s, 10), t);
+// }

@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int	main(void)
+{
+	char a[] = "Encontra uma palavra";
+	char b[] = "";
+	printf("%s", ft_strnstr(a, b, 30));
+}

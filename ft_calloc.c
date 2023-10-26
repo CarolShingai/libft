@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 17:31:19 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/25 17:17:09 by cshingai         ###   ########.fr       */
+/*   Created: 2023/10/23 13:33:01 by cshingai          #+#    #+#             */
+/*   Updated: 2023/10/23 15:22:14 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest,const void *src, size_t n)
+void	*ft_calloc(size_t n_element, size_t size)
 {
-	char	*char_dest;
-	char	*char_src;
-	size_t	i;
+	void	*temp;
 
-	i = 0;
-	char_dest = (char *) dest;
-	char_src = (char *) src;
-	while (i < n)
-	{
-		char_dest[i] = char_src[i];
-		i++;
-	}
-	return (dest);
+	if ((size * n_element != 0) && (n_element * size) / size != n_element)
+		return (0);
+	temp = malloc (n_element * size);
+	if (temp != 0)
+		ft_memset(temp, 0, n_element * size);
+	return (temp);
 }

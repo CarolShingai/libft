@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:51:46 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/20 14:26:59 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:01:37 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(char *str, int c)
 	{
 		if (str[index] == (char)c)
 		{
-			return (&str[index]);
+			return ((char *)&str[index]);
 		}
 		index++;
 	}

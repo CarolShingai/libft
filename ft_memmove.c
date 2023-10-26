@@ -6,13 +6,11 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:03:41 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/20 14:48:23 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:33:49 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(char *c);
 
 void	*ft_memmove(void *dest, void *src, size_t n)
 {

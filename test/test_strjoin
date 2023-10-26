@@ -1,0 +1,6 @@
+int	main(void)
+{
+	char a[] = "flor de";
+	char b[] = "laranjeira";
+	printf("%s", ft_strjoin(a, b));
+}
