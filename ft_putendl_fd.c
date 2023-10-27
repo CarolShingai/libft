@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 14:03:41 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/27 15:30:11 by cshingai         ###   ########.fr       */
+/*   Created: 2023/10/27 15:47:58 by cshingai          #+#    #+#             */
+/*   Updated: 2023/10/27 16:19:42 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, void *src, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-	char	*char_src;
-	char	*char_dest;
-
-	i = n;
-	char_dest = dest;
-	char_src = src;
-	if (src > dest)
-	{
-		ft_memcpy(dest, src, n);
-	}
-	else
-	{
-		while (i > 0)
-		{
-			char_dest[i - 1] = char_src[i - 1];
-			i--;
-		}
-	}
-	return (dest);
+	while (*s)
+		ft_putchar_fd(*s++, fd);
+	ft_putchar_fd('\n', fd);
 }
+
+// int main(void)
+// {
+// 	char d[] = "luva";
+// 	char a[] = "ovo";
+// 	ft_putendl_fd(d, 1);
+// 	ft_putendl_fd(a, 1);
+// }
