@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:51:46 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/26 19:01:37 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/02 20:54:11 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strchr(char *str, int c)
 	index = 0;
 	while (str[index])
 	{
-		if (str[index] == (char)c)
+		if (str[index] == (unsigned char)c)
 		{
 			return ((char *)&str[index]);
 		}
 		index++;
 	}
-	if (c == '\0')
-		return ((char *) &str[ft_strlen(str)]);
+	if ((unsigned char)c == str[index])
+		return ((char *) &str[index]);
 	return (0);
 }

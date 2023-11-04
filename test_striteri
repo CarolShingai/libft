@@ -1,0 +1,13 @@
+// // Função de exemplo que imprime o índice e o caractere
+// void print_char(unsigned int index, char *c) {
+//     printf("Index: %u, Character: %c\n", index, *c);
+// }
+
+// int main() {
+//     char str[] = "Hello, World!";
+
+//     // Chame ft_striteri e passe a função de callback print_char
+//     ft_striteri(str, print_char);
+
+//     return 0;
+// }
