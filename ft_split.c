@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 21:07:34 by cshingai          #+#    #+#             */
-/*   Updated: 2023/11/03 21:29:12 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:52:56 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	cont_words(const char *s, char sep)
 {
-	int nbr_word;
+	int	nbr_word;
 
 	nbr_word = 0;
 	while (*s)
@@ -29,17 +29,17 @@ int	cont_words(const char *s, char sep)
 
 int	words_len(char const *s, char sep)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(s[i] && s[i] != sep)
+	while (s[i] && s[i] != sep)
 		i++;
 	return (i);
 }
 
-void	ft_free_big_str(char **big_str, int size)
+void	ft_free_big_str(char **big_str, size_t size)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while (i < size)
@@ -50,43 +50,74 @@ void	ft_free_big_str(char **big_str, int size)
 	free(big_str);
 }
 
-char	*ft_put_words(const char *s, char sep, char **big_str, int nbr_words)
+char	*ft_put_words_in_array(const char *s, char sep)
 {
 	int		idx_s;
-	int		idx_bs;
+	int		i;
+	int		word_size;
+	char	*new_word;
 
 	idx_s = 0;
-	idx_bs = 0;
-	while (s[idx_s] && s[idx_s] != sep)
-	{
-		idx_s++;
-	}
-	if (s[idx_s] && s[idx_s] != sep)
-		*big_str[idx_bs] = *ft_substr(*s, idx_s, words_len(&s, sep));
-		idx_bs++;
-	if (!**big_str)
-		ft_free_big_str(**big_str, nbr_words);
+	i = -1;
+	if (s[0] == '\0')
 		return (0);
-	return(big_str);
+	while (s[idx_s] && s[idx_s] == sep)
+		idx_s++;
+	if (s[idx_s])
+	{
+		word_size = words_len(s + idx_s, sep);
+		new_word = (char *) malloc((word_size + 1) * sizeof(char));
+		if (!new_word)
+			return (0);
+		while (++i < word_size)
+			new_word[i] = s[idx_s + i];
+		new_word[words_len(s + idx_s, sep)] = '\0';
+	}
+	if (s[idx_s] == '\0' || !new_word)
+		return (0);
+	return (new_word);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**big_str;
 	int		word_count;
+	int		iter_word;
 
+	iter_word = 0;
 	word_count = cont_words(s, c);
+	big_str = (char **) malloc (sizeof(char *) * (word_count + 1));
 	if (!s)
 		return (0);
-	**big_str = (char *) malloc (sizeof(char) * (word_count + 1));
-	if (!big_str)
-		return (0);
-	*big_str = ft_put_words(s, c, big_str, word_count);
-	return(big_str);
+	while (iter_word <= word_count)
+	{
+		big_str[iter_word] = ft_put_words_in_array(s, c);
+		if (iter_word != word_count && !big_str[iter_word])
+		{
+			ft_free_big_str(big_str, word_count);
+			return (0);
+		}
+		while (*s == c)
+			s++;
+		if (*s != '\0')
+			s += words_len(s, c);
+		iter_word++;
+	}
+	return (big_str);
 }
 
-int main(void)
-{
-	char *s = "   a   1551  a  ";
-	printf("%s", *ft_split(s, ' '));
-}
+// int main(void)
+// {
+// 	char *s = "      split       this for   me  !       ";
+
+// 	char **split = ft_split(s, ' ');
+
+// 	printf("%s\n", split[0]);
+// 	printf("%s\n", split[1]);
+// 	printf("%s\n", split[2]);
+// 	printf("%s\n", split[3]);
+// 	printf("%s\n", split[4]);
+// 	printf("%s\n", split[5]);
+
+// 	ft_free_big_str(split, 5);
+// }
