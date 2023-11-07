@@ -1,7 +1,0 @@
-int	main(void)
-{
-	char d[] = "Encontre a letra";
-	printf("%s", ft_strchr(d, '\0'));
-	printf("%s\n", strchr(d, 'e'));
-	printf("%s\n", strrchr(d, 'e'));
-}

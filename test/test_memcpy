@@ -1,7 +1,0 @@
-int	main(void)
-{
-	char ph[20] = "Vamos copiar isso";
-	char ph_cpy[100];
-	// printf("%s", ft_memcpy(ph_cpy, ph, sizeof(ph)));
-	printf("%s", memcpy(ph_cpy, ph, sizeof(ph)));
-}

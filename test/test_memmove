@@ -1,8 +1,0 @@
-int	main(void)
-{
-	char x[20] = "hello world";
-	char *d = &x[3];
-	//printf("%s", memmove(d, x, sizeof(x)));
-	ft_memmove(d, x, sizeof(x));
-	printf("%s", x);
-}

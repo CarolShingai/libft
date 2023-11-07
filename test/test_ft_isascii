@@ -1,5 +1,0 @@
-int	main(void)
-{
-	printf("%d", ft_isascii(133));
-	printf("%d", isascii(133));
-}

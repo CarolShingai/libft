@@ -1,8 +1,0 @@
-
-int	main(void)
-{
-	char x[20] = "procurar";
-
-	printf("%s\n",(char *) ft_memchr(x, '\0', sizeof(x)));
-	printf("%s", (char *) memchr(x, '\0', sizeof(x)));
-}

@@ -1,6 +1,0 @@
-int	main(void)
-{
-	char t[12] = "Boa noite, ";
-	char s[] = "tchau.";
-	printf("%zu %s\n", ft_strlcat(t, s, 30), t);
-}

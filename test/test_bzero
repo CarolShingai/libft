@@ -1,7 +1,0 @@
-int	main(void)
-{
-	char t[10] = "luva";
-	// bzero(t, sizeof(t));
-	ft_bzero(t, sizeof(t));
-	printf("%s", t);
-}
