@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:42:19 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/25 17:18:13 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:38:51 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (number * sign);
 }
-
-// int main() {
-//     char str1[] = "12345";
-//     char str2[] = "-6789";
-//     char str3[] = "  42 is a great number";
-
-//     int num1 = ft_atoi(str1);
-//     int num2 = ft_atoi(str2);
-//     int num3 = ft_atoi(str3);
-
-//     printf("String 1: %d\n", num1);
-//     printf("String 2: %d\n", num2);
-//     printf("String 3: %d\n", num3);
-
-//     return 0;
-// }

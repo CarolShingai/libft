@@ -6,12 +6,11 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:46:24 by cshingai          #+#    #+#             */
-/*   Updated: 2023/11/04 18:02:39 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:42:43 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -39,11 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_s[i_sub] = '\0';
 	return (sub_s);
 }
-
-// int	main(void)
-// {
-// 	char c[] = "um conjunto de strings";
-// 	char *d = ft_substr(c, 3, 8);
-
-// 	printf("%s", d);
-// }

@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:09:32 by cshingai          #+#    #+#             */
-/*   Updated: 2023/11/04 19:07:33 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:34:27 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char *res = ft_itoa(-42);
-//     printf("%s", res);
-// 	free(res);
-// }

@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 14:49:28 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/23 15:19:19 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:40:09 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strdup(char *c)
 	temp[index] = '\0';
 	return (temp);
 }
-
-// int	main(void)
-// {
-// 	char f[] = "";
-// 	char *x = ft_strdup(f);
-// 	printf("%s", x);
-// }

@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:26:50 by cshingai          #+#    #+#             */
-/*   Updated: 2023/11/07 14:12:07 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:35:00 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(void *str, int c, size_t n)
 {
-	size_t			i;
+	size_t	i;
 	char	char_c;
 	char	*char_str;
 

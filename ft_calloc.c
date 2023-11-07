@@ -6,12 +6,11 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:33:01 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/23 15:22:14 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:23:56 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_calloc(size_t n_element, size_t size)
 {

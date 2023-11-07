@@ -6,12 +6,11 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:24:51 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/27 15:32:29 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:42:36 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -38,10 +37,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_string = ft_substr(t_string, 0, last + 1);
 	return (new_string);
 }
-
-// int	main(void)
-// {
-// 	char a[] = "--/asbha/---";
-// 	char b[] = "-/a";
-// 	printf("%s", ft_strtrim(a, b));
-// }

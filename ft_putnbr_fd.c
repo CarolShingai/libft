@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:23:44 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/27 18:21:33 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:31:56 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &str, 1);
 	}
 }
-
-// int	main(void)
-// {
-// 	int t = 1548;
-// 	ft_putnbr_fd(t, 2);
-// }

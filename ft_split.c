@@ -6,12 +6,11 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 21:07:34 by cshingai          #+#    #+#             */
-/*   Updated: 2023/11/04 18:52:56 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:42:59 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	cont_words(const char *s, char sep)
 {
@@ -105,19 +104,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (big_str);
 }
-
-// int main(void)
-// {
-// 	char *s = "      split       this for   me  !       ";
-
-// 	char **split = ft_split(s, ' ');
-
-// 	printf("%s\n", split[0]);
-// 	printf("%s\n", split[1]);
-// 	printf("%s\n", split[2]);
-// 	printf("%s\n", split[3]);
-// 	printf("%s\n", split[4]);
-// 	printf("%s\n", split[5]);
-
-// 	ft_free_big_str(split, 5);
-// }

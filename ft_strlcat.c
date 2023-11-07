@@ -6,7 +6,7 @@
 /*   By: cshingai <cshingai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:32:38 by cshingai          #+#    #+#             */
-/*   Updated: 2023/10/25 17:35:42 by cshingai         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:41:10 by cshingai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ size_t	ft_strlcat(char *dest, char *src, size_t n)
 	}
 	return (size_dest + size_src);
 }
-// int	main(void)
-// {
-// 	char t[12] = "Boa noite, ";
-// 	char s[] = "tchau.";
-// 	printf("%zu %s\n", ft_strlcat(t, s, 10), t);
-// }
